@@ -1,0 +1,70 @@
+{% extends "base.html"%}
+
+{% load static%} 
+
+{%block title%}
+<title>Home Page- Taskmate</title>
+{%endblock title%} 
+
+{%block content%}
+<div class="container">
+  {% if messages %}
+       {% for message in messages  %}
+           <div class="alert alert-dark alert-dismissible fade show" role="alert">
+           {{message}}
+           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>
+
+        {% endfor %}
+  
+{% endif %}
+  <div class="row mt-5">
+    <div class="col-lg-4">
+      <img
+        src="{% static 'images/home2.jpg' %}"
+        alt="Home"
+        height="250"
+        width="360"
+        class="rounded-lg"
+      />
+    </div>
+    <div class="col-lg-4">
+      <img
+        src="{% static 'images/homee2.jpg' %}"
+        alt="Home2"
+        height="250"
+        width="360"
+        class="rounded-lg"
+      />
+    </div>
+    <div class="col-lg-4">
+      <img
+        src="{%static 'images/home3.jpg' %}"
+        alt="Home3"
+        height="250"
+        width="360"
+        
+      />
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-10 offset-md-1">
+      <center>
+        <p class="h2 text-primary">Quick And Easy To Use Anytime, Anywhere!</p>
+      </center>
+      <center>
+        <p class="h3 mt-3">Plan Your Day Better, Keep It Organized.</p>
+      </center>
+      <center><p class="h5">Here is Taskmate For You!</p></center>
+      <center>
+        <a href={%url 'todolist'%}><button type="button" class="btn btn-primary btn-lg mt-3">
+          Let's Get Started
+        </button>
+      </a>
+      </center>
+    </div>
+  </div>
+</div>
+
+{%endblock content %}
