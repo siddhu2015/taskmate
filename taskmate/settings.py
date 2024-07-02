@@ -143,5 +143,3 @@ CRISPY_ALLOWED_TEMPLATE_PACKS="bootstrap5"
 LOGIN_REDIRECT_URL="todolist"
 LOGIN_URL="login"
 
-
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/', 'http://127.0.0.1:8000/']
