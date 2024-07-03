@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from todolist_app import views as todolist_view
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,7 @@ urlpatterns = [
     path('',todolist_view.index, name='index'),
     path('contact', todolist_view.contact, name='contact'),
     path('about', todolist_view.about, name='about'),
+    path('login', auth_views.LoginView.as_view(template_name='login.html '), name='login'),
     
     
     
