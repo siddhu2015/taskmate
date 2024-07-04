@@ -19,6 +19,7 @@ from django.urls import path,include
 from todolist_app import views as todolist_view
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todolist/', include('todolist_app.urls')),
